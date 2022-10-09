@@ -22,10 +22,9 @@ const Login = () => {
             }),
             credentials:'include'
         });
-        console.log(res);
+    
         const data=await res.json();
-        console.log(data)
-        console.log(res.status);
+        
         if (res.status === 200) {
             dispatch({type:"USER",payload:true});
             window.alert("Login Successfull");
